@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Login</title>
+  </head>
+  <body class="fondo">
+    <h1>CRUD</h1>
+    <header>
+      <div class="maincontent">
+        <div><img src="../assents/Aby.png" alt="" class="mainlogo"></div>
+        <div class="containerlink">
+          <a href=""><h1 class="linkpag">Sobre mi</h1></a>
+          <a href=""><h1 class="linkpag">Tecnologias Utilizadas</h3></a>
+          <a href="./index.html"><h1 class="linkpag">Inicio</h3></a>
+        </div>
+      </div>
+      
+    </header>
+   
+    <body>
+      <section>
+        <div class="seccioncrud">
+            <div class="containersemcrud">
+                <div class="containercrud">
+                    <label for="lblname">name :</label>
+                    <input type="text" id="txtname" placeholder="Ingrese el nombre de la pelicula">
+                </div class="containercrud">
+                <div class="containercrud">
+                    <label for="lblimg">Url Imagen :</label>
+                    <input type="text" id="txtimg" placeholder="Ingrese la url de la Imagen">
+                </div>
+                <div class="containercrud">
+                    <label for="lbldescription">Descripcion :</label>
+                    <textarea name="description" id="txtadescripction" cols="20" rows="5" placeholder="Ingrese la descripcion de la imagen"></textarea>
+                </div>
+            </div>
+            <div class="containersemcrud"> 
+                <div class="containercrud">
+                    <label for="lblduracion">Duracion :</label>
+                    <input type="text" id="txtduracion" placeholder="Ingese la duracion de la pelicula">
+                </div class="containersemcrud">
+                <div class="containercrud">
+                    <label for="lblcalificacion">calificacion</label>
+                    <input type="text" id="txtcalification" placeholder="Ingrese la calificacion de la pelicula">
+                </div>  
+            </div>
+        </div>
+        <div class="containerguardar"><button class="btnguardar" id="btnguardar">Guardar</button></div>
+      </section>
+     <section class="titlesection">
+      <h1>Clasificacion de Peliculas</h1>
+      <div class="separation"></div>
+     </section>
+    <section id="showmovie" class="seccionmovie">
+  
+    </section>
+    <script src="./scripts/tempData.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+.fondo{
+  background-color: #506ee5;
+}
+.maincontent{
+  display: flex;
+  font-size: 30px;
+  background-color: #506ee5;
+  color: #f0f7da;
+}
+.mainlogo{
+  width: 300px;
+  height: 200px;
+
+}
+.containerlink{
+  text-align: center;
+  width: 1200px;
+  display: flex;
+  justify-content:flex-end;
+  
+
+}
+.linkpag{
+  font-size: 30px;
+  color: #f0f7da;
+  padding: 50px;
+  margin-left: 25px;
+  width: auto;
+  background-color: #68b2f8;
+  
+}
+.titlesection{
+  font-size: 50px;
+  text-align: center;
+  background-color: #506ee5;
+}
+.separation{
+  margin-left: 25%;
+  width: 800px;
+  background-color: #fff1c1;
+  height: 10px;
+}
+.seccionmovie{
+  display: flex;
+  justify-content: center;
+}
+.containermovie{
+  text-align: center;
+  border: black 3px solid ;
+  margin: 15px;
+}
+.img{
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+}
+.titlemovie{
+  font-size: 10px;
+
+}
+.seccioncrud{
+  display: flex ;
+  background-color: #68b2f8;
+  
+}
+.containersemcrud{
+  border: black 5px solid;
+  width: 55%;
+}
+.containercrud{
+  font-size: 20px;
+  margin: 10px;
+  
+  text-align: center;
+  
+  
+}
+.containerguardar{
+  display: flex;
+  margin-left: 45%;
+}
+.btnguardar{
+  font-size: 30px;
+}
