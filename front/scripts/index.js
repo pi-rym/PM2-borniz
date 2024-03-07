@@ -2,10 +2,10 @@
     constructor(title,year,director,duration,genre,rate,poster){
         this.title = title;
         this.year = year
-        this.ditector =director;
+        this.director =director;
         this.duration = duration;
-        this.genero = genre;
-        this.clasification =rate;
+        this.genre = genre;
+        this.rate =rate;
         this.poster=poster
         // this.img = post;
         console.log(`se crearon los datos de ${title}`)
@@ -33,18 +33,23 @@ const mapMovie= ({title,year,director,duration,genre,rate,poster})=>{
     console.log(`'Se esta creado las cads'${title}`);
 
     const divMovie = document.createElement('div');
+    const divdate=document.createElement('div');
+    divMovie.classList.add('containercards');
     divMovie.innerHTML=
-    `<h3><strong> Titulo ;${title} (${year})</strong></h3>
-    <img src=${poster} class="img" alt="imagen"></img>
+    `<h3 class="pagiletas"><strong> Titulo ;${title} (${year}) </strong></h3>
+    <img src=${poster} class="imagencards" alt="imagen"></img>`
+    divdate.innerHTML=`
     <p><strong>Director ;${director}</strong></p>
     <p><strong>Duracion ;${duration}</strong></p>
-    <p><strong>Genero ;${genre}</strong></p>
+    <p><strong>Genero ;${genre.join(", ")}</strong></p>
     <p><strong>Calificaion ;${rate}</strong></p>
     `
+    console.log(`${director}`);
     divMovie.style.border = "solid 1px #3A3335";
-    divMovie.style.width = "250px";
+    divMovie.style.width = "2500px";
     divMovie.style.margin = "15px";
     divMovie.style.paddingLeft = "1em";
+    divMovie.appendChild(divdate);
     
 
     return divMovie;
@@ -61,7 +66,7 @@ const renderMovie= () =>{
     datos.forEach(movie=>{
     repository.Createmovie(movie);
     });
-    console.log(datos);
+    console.log(`El director de la peli es ${datos.ditector}`);
 
     const mov = repository.getAllmovie();
     const allmovie = mov.map(mapMovie);

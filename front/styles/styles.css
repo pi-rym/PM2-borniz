@@ -1,11 +1,14 @@
 .fondo{
-  background-color: #506ee5;
+  background-color: #0a0a0c;
+  background-image: url('https://i.pinimg.com/564x/8d/15/e6/8d15e6764a1d3c397435e76fa06f96a7.jpg');
+background-size: 100%;
+
 }
 .maincontent{
   display: flex;
   font-size: 30px;
-  background-color: #506ee5;
-  color: #f0f7da;
+  
+  color: #ffffef;
 }
 .mainlogo{
   width: 300px;
@@ -13,8 +16,8 @@
 
 }
 .containerlink{
-  text-align: center;
-  width: 1200px;
+  text-align: end;
+  width: 100rem;
   display: flex;
   justify-content:flex-end;
   
@@ -22,23 +25,31 @@
 }
 .linkpag{
   font-size: 30px;
-  color: #f0f7da;
+  color: #ffffef;
   padding: 50px;
-  margin-left: 25px;
+  margin-left: 5px;
   width: auto;
-  background-color: #68b2f8;
+  
   
 }
+.h1{
+  color: #ffffef;
+  -webkit-text-stroke-color: #0a0a0a;
+  -webkit-text-stroke-width: .1px;
+}
 .titlesection{
+  
+  font-family: 'Times New Roman', Times, serif;
   font-size: 50px;
   text-align: center;
-  background-color: #506ee5;
+  /* margin-top: 4rem; */
+  margin: 4rem;
 }
 .separation{
   margin-left: 25%;
   width: 800px;
-  background-color: #fff1c1;
-  height: 10px;
+  background-color: #661010 ;
+  height: 5px;
 }
 .seccionmovie{
   display: flex;
@@ -60,7 +71,7 @@
 }
 .seccioncrud{
   display: flex ;
-  background-color: #68b2f8;
+  background-color: #661010;
   
 }
 .containersemcrud{
@@ -81,4 +92,19 @@
 }
 .btnguardar{
   font-size: 30px;
+} 
+.pagiletas{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  -webkit-text-stroke-color: #0f0f0f;
+  -webkit-text-stroke-width: .1px;
+  color: #ffffef;
+} 
+.imagencards{
+  width: 200px;
+  height: 300px;
 }
+.containercards{
+  display: flex;
+
+}      
