@@ -1,20 +1,17 @@
-const hanlder = require('./handler');
-const axios = require('axios');
+const eventBtnUpdate = require('./handler')
+const axios = require('axios')
 
-
-
-
-
-
-const requestmovie = async()=>{
-    try {
-       const conect= axios('https://students-api.2.us-1.fl0.io/movies')
-       console.log(conect.data)
-        hanlder(conect.data)
+const requestMovie = async () => {
+   try {
+      const {data} = await axios('https://students-api.up.railway.app/movies');
+      console.log(data);
+      eventBtnUpdate(data)
    } catch (error) {
-    console.error("No se pudo conectar:", error.message);
+      console.error('No entro')
    }
 }
 
-const btnupdate = document.getElementById('btnupdate');
-btnupdate.addEventListener('click',requestmovie);
+const btnUpdate = document.getElementById('btnupdate');
+btnUpdate.addEventListener('click', requestMovie);
+
+

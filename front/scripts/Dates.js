@@ -1,16 +1,14 @@
-const rep = require('./repository');
-class Dates{
-    constructor(title,year,director,duration,genre,rate,poster){
-        console.log('estamos en Dates');
+class Dates {
+    constructor(title, year, director, duration, genre, rate, poster) {
+        console.log('Creando una fecha');
         this.title = title;
-        this.year = year
-        this.director =director;
+        this.year = year;
+        this.director = director;
         this.duration = duration;
         this.genre = genre;
-        this.rate =rate;
-        this.poster=poster
-        // this.img = post;
-        console.log(`se crearon los datos de ${title}`)
+        this.rate = rate;
+        this.poster = poster;
     }
- }
- module.exports=Dates;
+}
+
+module.exports = Dates;
