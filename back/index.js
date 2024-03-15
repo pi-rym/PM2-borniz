@@ -1,5 +1,6 @@
-const app = require('./src/services/server')
+const server = require('./src/server');
 
-const PORT = 3000;
 
-app.listen(PORT, ()=>console.log(`Server is listening on port ${PORT}`))
+const Port = 3000;
+
+server.listen(Port,()=>console.log(`Server is listering on port ${Port} `))
