@@ -1,12 +1,20 @@
-const axios = require('axios');
-const {Movies} = require("../types/class")
+const Movie = require("../models/Movies");
+const moviesValidation = require("../utils/validations/moviesValidations");
+const { Movies } = require("../types/class");
 
- module.exports = { getAllMovies : async () => {
+module.exports = {
+  getAllMovies: async () => {
     try {
-       const {data} = await axios('https://students-api.up.railway.app/movies');
-       const movies = data.map((movie)=>new Movies(movie))
-       return data;
+      const movies = await Movie.find();
+      console.log(movies);
+      const moviesCollection = movies.map((movie) => {
+        if (moviesValidation(movie)) {
+          return new Movies(movie);
+        }
+      });
+      return moviesCollection;
     } catch (error) {
-       throw new Error(error);
+      throw new Error(error.message);
     }
- }}
+  },
+};

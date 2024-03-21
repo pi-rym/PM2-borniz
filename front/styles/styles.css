@@ -10,6 +10,14 @@ background-size: 100%;
   
   color: #ffffef;
 }
+.height{
+  height: auto;
+}
+.containercarsadd{
+  height: 25em;
+  width: 50em;
+  display: none;
+}
 .mainlogo{
   width: 300px;
   height: 200px;
@@ -54,6 +62,7 @@ background-size: 100%;
 .seccionmovie{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .containermovie{
   text-align: center;
@@ -105,6 +114,6 @@ background-size: 100%;
   height: 300px;
 }
 .containercards{
-  display: flex;
+  /* display: flex; */
 
 }      

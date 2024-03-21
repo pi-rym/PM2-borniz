@@ -1,30 +1,26 @@
-const mapMovie = require('./map');
-const Repository = require('./repository');
+const mapMovie = require("./map");
+const Repository = require("./repository");
 
 const eventBtnUpdate = (data) => {
-    console.log(`los datos que entran en handler son ${data}`);
-    console.log('Entro en el manejador');
-    const sectionMovie = document.getElementById('showmovie');
-    sectionMovie.innerHTML = "";
+  const sectionMovie = document.getElementById("showmovie");
+  sectionMovie.innerHTML = "";
 
-    const repo = new Repository();
+  const repo = new Repository();
 
-    data.forEach(movie => {
-        repo.createMovie(movie);
-    });
+  data.forEach((movie) => {
+    repo.createMovie(movie);
+  });
 
-    console.log(`El director de la película es ${data.title}`);
+  const movies = repo.getAllMovies();
+  const allMovies = movies.map(mapMovie);
 
-    const movies = repo.getAllMovies();
-    const allMovies = movies.map(mapMovie);
+  allMovies.forEach((cards) => sectionMovie.appendChild(cards));
 
-    allMovies.forEach(cards => sectionMovie.appendChild(cards));
-
-    renderMovie(repo);
-}
+  renderMovie(repo);
+};
 
 const renderMovie = (repo) => {
-    console.log(repo.getAllMovies());
-}
+  console.log(repo.getAllMovies());
+};
 
 module.exports = eventBtnUpdate;

@@ -1,21 +1,26 @@
-const Dates = require('./Dates');
+const Dates = require("./Dates");
 
 class Repository {
-    constructor() {
-        this.movies = [];
-        console.log('Entrando en el repositorio');
-    }
+  constructor() {
+    this.movies = [];
+  }
 
-    createMovie({ title, year, director, duration, genre, rate, poster }) {
-        const newMovie = new Dates(title, year, director, duration, genre, rate, poster);
-        this.movies.push(newMovie);
-        console.log(`Se creó la película: ${newMovie.title}`);
-    }
+  createMovie({ title, year, director, duraction, genre, rate, poster }) {
+    const newMovie = new Dates(
+      title,
+      year,
+      director,
+      duraction,
+      genre,
+      rate,
+      poster
+    );
+    this.movies.push(newMovie);
+  }
 
-    getAllMovies() {
-        console.log('Obteniendo todas las películas');
-        return this.movies;
-    }
+  getAllMovies() {
+    return this.movies;
+  }
 }
 
 module.exports = Repository;

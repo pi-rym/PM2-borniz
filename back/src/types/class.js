@@ -1,20 +1,16 @@
-const { error } = require("console");
-const { Module } = require("module");
-
-class Movies{
-
-    constructor({ title, year, director, duration, genre, rate, poster }){
-        if(!{ title, year, director, duration, genre, rate, poster }){ throw new Error(error.message)}
-
-    
-        this.title = title;
-        this.year = year;
-        this.director = director;
-        this.duration = duration;
-        this.genre = genre;
-        this.rate = rate;
-        this.poster = poster;
+class Movies {
+  constructor({ id, title, year, director, duraction, genre, rate, poster }) {
+    if (!title || !year || !director) {
+      throw new Error("Missing required fields");
     }
-
+    this.id = id;
+    this.title = title;
+    this.year = year;
+    this.director = director;
+    this.duraction = duraction;
+    this.genre = genre;
+    this.rate = rate;
+    this.poster = poster;
+  }
 }
-module.exports = {Movies}
+module.exports = { Movies };
