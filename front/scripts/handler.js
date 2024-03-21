@@ -20,7 +20,7 @@ const eventBtnUpdate = (data) => {
 };
 
 const renderMovie = (repo) => {
-  console.log(repo.getAllMovies());
+  repo.getAllMovies();
 };
 
 module.exports = eventBtnUpdate;

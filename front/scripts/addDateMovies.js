@@ -15,8 +15,12 @@ const datesMovie = () => {
   const rate = document.getElementsByName("txtRate")[0].value;
   const poster = document.getElementsByName("txtPoster")[0].value;
   const genre = validateCheckbox();
+  console.log(genre);
+  if (genre.length === 0) {
+    throw alert("Debes seleccionar al menos un género");
+  }
   if (!title || !year || !director || !duraction || !genre || !rate || !poster)
-    throw new alert("Faltan datos");
+    alert("Faltan datos");
   else {
     alert(`los datos se agregaron correctamente ${title}`);
     let container = document.getElementById("contarinerAddMovie");
@@ -31,8 +35,6 @@ const datesMovie = () => {
     const repo = new Repository();
     const date = { title, year, director, duraction, genre, rate, poster };
     const jstringfiel = JSON.stringify(date);
-    const jdatesMovie = JSON.parse(jstringfiel);
-    console.log(jstringfiel);
     fetch("http://localhost:3000/movies", {
       method: "POST",
       headers: {

@@ -1,6 +1,5 @@
 const genre = ["Action", "Aventure", "Fantasy", "Sci - fi", "Romance"];
 const opcions = document.getElementById("opcions");
-console.log(`se estan creando los genre`);
 function renderGnere() {
   event.preventDefault();
   opcions.innerHTML = "";
@@ -25,7 +24,6 @@ function renderGnere() {
 function validateCheckbox() {
   const selectedGenres = [];
   const Checkbox = document.querySelectorAll('input[name="Genre[]"]');
-  console.log(Checkbox);
 
   Checkbox.forEach((checkbox) => {
     if (checkbox.checked) {

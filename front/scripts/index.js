@@ -3,7 +3,6 @@ const axios = require("axios");
 const datesMovie = require("./addDateMovies");
 const renderGnere = require("./genre");
 const requestMovie = async () => {
-  console.log(`entro en requestMovie`);
   try {
     const { data } = await axios("http://localhost:3000/movies");
     eventBtnUpdate(data);

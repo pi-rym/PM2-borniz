@@ -15,9 +15,6 @@ const mapMovie = ({
         <h3 class="pagiletas"><strong>Título: ${title} (${year})</strong></h3>
         <img src="${poster}" class="imagencards" alt="imagen"></img>
     `;
-  console.log(
-    `estamos en map y se esta creadon el contenedor de la pelicula ${title}`
-  );
   divDate.innerHTML = `
         <p><strong class="pagiletas">Director: ${director}</strong></p>
         <p><strong class="pagiletas">Duración: ${duraction}</strong></p>
